@@ -4,80 +4,458 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sophy Awaliah — Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">SA.</div>
-
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">SA.</a>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#experience">Pengalaman</a></li>
+        <li><a href="#contact" class="nav-cta">Kontak</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <span class="badge">Open To Work</span>
-
-      <h1>
-        Sophy
-        <span>Awaliah</span>
-      </h1>
-
-      <p class="role">
-        Software Engineer · Web Developer · Data Analyst
-      </p>
-
-      <p class="desc">
-        Individu yang memiliki minat di bidang software engineering,
-        web development, dan analisis data. Berpengalaman membangun
-        website modern serta melakukan pengolahan dan klasifikasi data.
-      </p>
-
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary">Lihat Proyek</a>
-        <a href="mailto:sophyawaliah@gmail.com" class="btn-secondary">Hubungi Saya</a>
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-line l1"></div>
+      <div class="hero-line l2"></div>
+      <div class="hero-circle"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Data Analyst · Web Developer · IoT</p>
+      <h1 class="hero-name">Sophy<br><em>Awaliah</em></h1>
+      <p class="hero-desc">Mahasiswa Informatika dengan minat di pengolahan data, machine learning, dan pengembangan web.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-outline">Lihat Proyek</a>
+        <a href="#contact" class="btn-text">Hubungi Saya →</a>
       </div>
     </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <div class="hero-right">
-      <div class="contact-card">
-        <h3>Kontak</h3>
-
-        <div class="contact-item">
-          <span>Email</span>
-          <p>sophyawaliah@gmail.com</p>
-        </div>
-
-        <div class="contact-item">
-          <span>Phone</span>
-          <p>+62 81380092946</p>
-        </div>
-
-        <div class="contact-item">
-          <span>GitHub</span>
-          <p>github.com/sophyaw</p>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container grid-2">
+      <div class="about-left fade-in">
+        <div class="section-tag">01 — Tentang</div>
+        <h2 class="section-title">Dari Data<br><em>Menjadi Insight</em></h2>
+      </div>
+      <div class="about-right fade-in delay-1">
+        <p class="about-text">
+          Mahasiswa Informatika Universitas Mulawarman yang memiliki minat pada pengolahan dan analisis data, dengan pengalaman analisis menggunakan Python. Terbiasa mengolah dataset untuk menghasilkan insight serta mendukung pengambilan keputusan.
+        </p>
+        <p class="about-text">
+          Memiliki kemampuan dasar dalam pengembangan website berbasis PHP dan pengelolaan database MySQL. Berpengalaman dalam proyek machine learning, IoT, dan mobile app.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">8+</span>
+            <span class="stat-label">Proyek</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Magang</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2022</span>
+            <span class="stat-label">Mulai Kuliah</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
+  <section id="skills" class="bg-warm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag">02 — Keahlian</div>
+        <h2 class="section-title">Stack &amp; <em>Kemampuan</em></h2>
+      </div>
+      <div class="skills-grid fade-in delay-1">
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="section-label">01 — About</div>
+        <div class="skill-group">
+          <div class="skill-group-icon">◈</div>
+          <h3>Data &amp; AI</h3>
+          <ul>
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Data Analysis &amp; Visualization</li>
+            <li>Kecerdasan Buatan</li>
+          </ul>
+        </div>
 
-    <h2 class="section-title">
+        <div class="skill-group">
+          <div class="skill-group-icon">◈</div>
+          <h3>Web &amp; Database</h3>
+          <ul>
+            <li>PHP</li>
+            <li>HTML / CSS</li>
+            <li>MySQL</li>
+            <li>Basis Data</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">◈</div>
+          <h3>Mobile &amp; IoT</h3>
+          <ul>
+            <li>Flutter (Prototype)</li>
+            <li>Sensor Ultrasonik</li>
+            <li>Integrasi API</li>
+            <li>Wireframe &amp; Prototyping</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">◈</div>
+          <h3>Tools &amp; Soft Skills</h3>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Microsoft Office</li>
+            <li>Teamwork &amp; Komunikasi</li>
+            <li>Adaptif &amp; Problem Solving</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag">03 — Proyek</div>
+        <h2 class="section-title">Karya &amp; <em>Proyek Kuliah</em></h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- PROJECT 1 -->
+        <div class="project-item fade-in" data-index="0">
+          <div class="project-thumb" onclick="openLightbox(0)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <span class="project-category">Machine Learning · Python</span>
+            </div>
+            <h3 class="project-title">Weather Prediction</h3>
+            <p class="project-desc">Data cleaning dan analisis pada dataset cuaca Kaggle, serta klasifikasi kondisi cuaca menggunakan pendekatan machine learning.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Machine Learning</span><span>Data Kaggle</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-item fade-in delay-1" data-index="1">
+          <div class="project-thumb" onclick="openLightbox(1)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2025</span>
+              <span class="project-category">Data Analysis · Healthcare</span>
+            </div>
+            <h3 class="project-title">Klasifikasi Hipertensi</h3>
+            <p class="project-desc">Analisis data untuk menentukan tingkat hipertensi (normal, prehipertensi, tahap 1 &amp; 2) berdasarkan dataset dari Puskesmas Remaja Samarinda.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Data Analysis</span><span>Healthcare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-item fade-in" data-index="2">
+          <div class="project-thumb" onclick="openLightbox(2)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+              <span class="project-category">Web · PHP · MySQL</span>
+            </div>
+            <h3 class="project-title">Web Album &amp; Merch K-Pop Seventeen</h3>
+            <p class="project-desc">Website berbasis PHP dan MySQL untuk mengelola database album, merchandise, serta data pengguna dengan sistem pemesanan terintegrasi.</p>
+            <div class="project-tags">
+              <span>PHP</span><span>MySQL</span><span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-item fade-in delay-1" data-index="3">
+          <div class="project-thumb" onclick="openLightbox(3)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2023</span>
+              <span class="project-category">Web · PHP · MySQL</span>
+            </div>
+            <h3 class="project-title">Web Pemesanan Bis</h3>
+            <p class="project-desc">Pengembangan web pemesanan tiket bis berbasis PHP dan MySQL dengan pengelolaan database untuk data pengguna dan transaksi.</p>
+            <div class="project-tags">
+              <span>PHP</span><span>MySQL</span><span>Database</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="project-item fade-in" data-index="4">
+          <div class="project-thumb" onclick="openLightbox(4)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <span class="project-category">Mobile · Flutter</span>
+            </div>
+            <h3 class="project-title">Wireframe Aplikasi Mobile Merchandise</h3>
+            <p class="project-desc">Prototype aplikasi mobile menggunakan Flutter untuk platform merchandise — memungkinkan pengguna melihat produk, memilih barang, dan mengelola keranjang belanja.</p>
+            <div class="project-tags">
+              <span>Flutter</span><span>Mobile</span><span>Prototype</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="project-item fade-in delay-1" data-index="5">
+          <div class="project-thumb" onclick="openLightbox(5)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2024</span>
+              <span class="project-category">Mobile · Python · API</span>
+            </div>
+            <h3 class="project-title">Aplikasi Prediksi Cuaca</h3>
+            <p class="project-desc">Pengembangan aplikasi mobile prediksi cuaca dengan integrasi API dan pemodelan data menggunakan Python.</p>
+            <div class="project-tags">
+              <span>Python</span><span>API</span><span>Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 7 -->
+        <div class="project-item fade-in" data-index="6">
+          <div class="project-thumb" onclick="openLightbox(6)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2025</span>
+              <span class="project-category">IoT · Hardware</span>
+            </div>
+            <h3 class="project-title">Tempat Sampah Otomatis IoT</h3>
+            <p class="project-desc">Rancang bangun tempat sampah otomatis berbasis sensor ultrasonik sebagai solusi sanitasi modern di Kantor Desa Muara Badak, Badak Mekar.</p>
+            <div class="project-tags">
+              <span>IoT</span><span>Sensor Ultrasonik</span><span>Hardware</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 8 -->
+        <div class="project-item fade-in delay-1" data-index="7">
+          <div class="project-thumb" onclick="openLightbox(7)">
+            <div class="thumb-placeholder">
+              <span class="thumb-icon">◈</span>
+              <span class="thumb-hint">Klik untuk lihat detail</span>
+            </div>
+            <div class="thumb-overlay">
+              <span>Buka Galeri →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-year">2025</span>
+              <span class="project-category">Data · Python · Remote Sensing</span>
+            </div>
+            <h3 class="project-title">Analisis Curah Hujan GSMaP</h3>
+            <p class="project-desc">Analisis data curah hujan dengan membandingkan data pos pengamat dan data satelit GSMaP menggunakan Python, serta visualisasi pola curah hujan (Magang PUPR Samarinda).</p>
+            <div class="project-tags">
+              <span>Python</span><span>GSMaP</span><span>Visualisasi Data</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="bg-warm">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-tag">04 — Pengalaman</div>
+        <h2 class="section-title">Riwayat <em>Pengalaman</em></h2>
+      </div>
+      <div class="timeline fade-in delay-1">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan – Feb 2026</div>
+          <div class="timeline-body">
+            <h3>Barista</h3>
+            <p class="timeline-company">9 to 5 Coffee</p>
+            <p>Bertanggung jawab menyiapkan dan menyajikan makanan dan minuman sesuai SOP, serta melayani pelanggan dengan baik.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan – Feb 2025</div>
+          <div class="timeline-body">
+            <h3>Magang — Data Analyst</h3>
+            <p class="timeline-company">PUPR Samarinda</p>
+            <p>Menganalisis data curah hujan dengan membandingkan data pos pengamat dan data satelit GSMaP menggunakan Python, serta visualisasi pola curah hujan.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-body">
+            <h3>Pelatihan Website SpeecAce</h3>
+            <p class="timeline-company">SMA Negeri 2 Samarinda</p>
+            <p>Pelatihan penggunaan website Speech Ace untuk meningkatkan kemampuan pelafalan dan evaluasi berbasis teknologi.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022 — Sekarang</div>
+          <div class="timeline-body">
+            <h3>Mahasiswa Informatika</h3>
+            <p class="timeline-company">Universitas Mulawarman</p>
+            <p>Mata kuliah relevan: Basis Data, Kecerdasan Buatan, Machine Learning, Pemrograman Web.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-wrap fade-in">
+      <div class="section-tag">05 — Kontak</div>
+      <h2 class="section-title">Mari <em>Terhubung</em></h2>
+      <p class="contact-sub">Terbuka untuk peluang magang, kolaborasi proyek, atau sekadar berdiskusi.</p>
+      <div class="contact-links">
+        <a href="mailto:sophyawaliiah@gmail.com" class="contact-item">
+          <span class="contact-icon">✉</span>
+          <div>
+            <span class="contact-label">Email</span>
+            <span class="contact-val">sophyawaliiah@gmail.com</span>
+          </div>
+        </a>
+        <a href="tel:+6281380092946" class="contact-item">
+          <span class="contact-icon">◎</span>
+          <div>
+            <span class="contact-label">WhatsApp / Telepon</span>
+            <span class="contact-val">+62 813 8009 2946</span>
+          </div>
+        </a>
+        <a href="https://github.com/sophyaw" target="_blank" class="contact-item">
+          <span class="contact-icon">⌥</span>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-val">github.com/sophyaw</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Sophy Awaliah</span>
+      <span class="footer-copy">© 2025 · Informatika · Universitas Mulawarman</span>
+    </div>
+  </footer>
+
+  <!-- ── LIGHTBOX ── -->
+  <div id="lightbox" class="lightbox" onclick="closeLightboxOutside(event)">
+    <div class="lb-box">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <div class="lb-header">
+        <p class="lb-title" id="lb-title"></p>
+        <p class="lb-sub" id="lb-sub"></p>
+      </div>
+      <div class="lb-images" id="lb-images">
+        <!-- images injected by JS -->
+      </div>
+      <div class="lb-nav">
+        <button class="lb-prev" id="lb-prev" onclick="lbNav(-1)">←</button>
+        <div class="lb-dots" id="lb-dots"></div>
+        <button class="lb-next" id="lb-next" onclick="lbNav(1)">→</button>
+      </div>
+      <p class="lb-instructions">Gambar belum ditambahkan — ganti placeholder di file JS dengan path gambar Anda</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
