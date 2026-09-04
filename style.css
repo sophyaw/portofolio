@@ -2,15 +2,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #F8F5F0;
-  --bg-warm:   #F2EDE6;
-  --ink:        #1A1714;
-  --ink-2:      #4A4440;
-  --ink-3:      #8A7F78;
-  --accent:     #0e0045;
-  --accent-lt:  rgba(196,112,58,0.10);
-  --border:     rgba(26,23,20,0.10);
-  --white:      #FFFFFF;
+  --bg:        #F8F9FC;      /* background utama */
+  --bg-warm:   #EEF2F7;      /* background sekunder */
+  --ink:       #0B1F3A;      /* navy gelap untuk teks utama */
+  --ink-2:     #34495E;      /* teks sekunder */
+  --ink-3:     #7A8797;      /* teks muted */
+  --accent:    #0F2A5F;      /* navy utama */
+  --accent-lt: rgba(15,42,95,0.10); /* navy transparan */
+  --border:    rgba(15,42,95,0.12);
+  --white:     #FFFFFF;
 
   --ff-display: 'Cormorant Garamond', Georgia, serif;
   --ff-body:    'DM Sans', sans-serif;
