@@ -668,6 +668,81 @@ nav.scrolled {
   line-height: 1.7;
 }
 
+/* ── CERTIFICATES ────────────────────────────────── */
+#certificates { padding: 120px 0; }
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 28px;
+  background: var(--bg);
+  transition: background 0.25s, transform 0.25s;
+}
+
+.certificate-card:hover { background: var(--white); transform: translateY(-4px); }
+
+.certificate-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 42px;
+  border: 1px solid rgba(196,112,58,0.35);
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: var(--ff-display);
+  font-size: 18px;
+}
+
+.certificate-meta { display: flex; gap: 12px; margin-bottom: 12px; }
+
+.certificate-year,
+.certificate-type {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificate-year { color: var(--accent); font-weight: 600; }
+.certificate-type { color: var(--ink-3); }
+
+.certificate-content h3 {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.certificate-content p {
+  min-height: 48px;
+  color: var(--ink-2);
+  font-size: 13px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.certificate-link {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.certificate-link:hover { text-decoration: underline; }
+
 /* ── CONTACT ─────────────────────────────────────── */
 #contact { padding: 120px 0; }
 
@@ -972,6 +1047,7 @@ footer {
   .projects-list { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; gap: 48px; }
   .contact-links { flex-direction: column; }
+  .certificates-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 700px) {
@@ -983,6 +1059,8 @@ footer {
   .project-item { grid-template-columns: 1fr; }
   .project-thumb { min-height: 140px; }
   .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+  .certificates-grid { grid-template-columns: 1fr; }
+  .certificate-card { min-height: 0; }
   footer { padding: 24px 28px; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
