@@ -196,6 +196,29 @@ document.addEventListener('keydown', (e) => {
 /* ─── NAV SCROLL ─────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 
+/* ─── THEME TOGGLE ───────────────────────────────── */
+const themeToggle = document.querySelector('.theme-toggle');
+const savedTheme = localStorage.getItem('portfolio-theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+  document.body.classList.add('dark-mode');
+}
+
+function updateThemeToggle() {
+  const isDark = document.body.classList.contains('dark-mode');
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute('aria-label', isDark ? 'Aktifkan mode terang' : 'Aktifkan mode gelap');
+}
+
+updateThemeToggle();
+
+themeToggle.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+  updateThemeToggle();
+});
+
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 

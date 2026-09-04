@@ -21,6 +21,18 @@
   --nav-h: 68px;
 }
 
+body.dark-mode {
+  --bg:        #150E56;
+  --bg-warm:   #211968;
+  --ink:       #F8FCFD;
+  --ink-2:     #D4E7F0;
+  --ink-3:     #9FC4D0;
+  --accent:    #8FD6E1;
+  --accent-lt: rgba(143,214,225,0.14);
+  --border:    rgba(143,214,225,0.24);
+  --white:     #281F70;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -107,6 +119,8 @@ nav.scrolled {
   box-shadow: 0 1px 0 var(--border);
 }
 
+body.dark-mode nav.scrolled { background: rgba(21,14,86,0.92); }
+
 .nav-inner {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -156,6 +170,33 @@ nav.scrolled {
   background: var(--ink) !important;
   color: var(--bg) !important;
 }
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 20px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-lt);
+  border-color: var(--accent);
+}
+
+.theme-icon-dark { display: none; }
+body.dark-mode .theme-icon-light { display: none; }
+body.dark-mode .theme-icon-dark { display: inline; }
 
 .nav-toggle {
   display: none;
@@ -1056,6 +1097,7 @@ footer {
   nav { height: 60px; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  .theme-toggle { margin-left: auto; margin-right: 14px; }
   .hero-name { font-size: 64px; }
   .skills-grid { grid-template-columns: 1fr; }
   .project-item { grid-template-columns: 1fr; }
