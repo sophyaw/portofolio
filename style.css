@@ -7,7 +7,7 @@
   --ink:        #1A1714;
   --ink-2:      #4A4440;
   --ink-3:      #8A7F78;
-  --accent:     #C4703A;
+  --accent:     #0e0045;
   --accent-lt:  rgba(196,112,58,0.10);
   --border:     rgba(26,23,20,0.10);
   --white:      #FFFFFF;
@@ -175,13 +175,13 @@ nav.scrolled {
 
 /* ── HERO ────────────────────────────────────────── */
 #hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: var(--nav-h);
+  padding: var(--nav-h) 0 88px;
 }
 
 .hero-bg {
@@ -315,7 +315,7 @@ nav.scrolled {
 
 .hero-scroll {
   position: absolute;
-  bottom: 40px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -333,7 +333,7 @@ nav.scrolled {
 
 .scroll-line {
   width: 1px;
-  height: 40px;
+  height: 28px;
   background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollPulse 1.8s ease-in-out infinite;
 }
@@ -1063,6 +1063,15 @@ footer {
   .certificate-card { min-height: 0; }
   footer { padding: 24px 28px; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (max-height: 700px) {
+  #hero { padding-bottom: 64px; }
+  .hero-eyebrow { margin-bottom: 14px; }
+  .hero-name { margin-bottom: 18px; }
+  .hero-desc { margin-bottom: 24px; }
+  .hero-scroll { bottom: 14px; gap: 5px; }
+  .scroll-line { height: 20px; }
 }
 
 /* mobile nav open */
