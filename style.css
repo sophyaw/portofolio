@@ -2,14 +2,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #F8F9FC;      /* background utama */
-  --bg-warm:   #EEF2F7;      /* background sekunder */
-  --ink:       #0B1F3A;      /* navy gelap untuk teks utama */
-  --ink-2:     #34495E;      /* teks sekunder */
-  --ink-3:     #7A8797;      /* teks muted */
-  --accent:    #0F2A5F;      /* navy utama */
-  --accent-lt: rgba(15,42,95,0.10); /* navy transparan */
-  --border:    rgba(15,42,95,0.12);
+  --bg:        #F8FCFD;      /* background utama */
+  --bg-warm:   #E8F7F9;      /* background sekunder */
+  --ink:       #150E56;      /* indigo gelap untuk teks utama */
+  --ink-2:     #35436F;      /* teks sekunder */
+  --ink-3:     #71839B;      /* teks muted */
+  --accent:    #7B113A;      /* maroon utama */
+  --cyan:      #1597BB;      /* cyan pendukung */
+  --aqua:      #8FD6E1;      /* aqua dekoratif */
+  --accent-lt: rgba(123,17,58,0.10); /* maroon transparan */
+  --border:    rgba(21,151,187,0.18);
   --white:     #FFFFFF;
 
   --ff-display: 'Cormorant Garamond', Georgia, serif;
@@ -100,7 +102,7 @@ nav {
 }
 
 nav.scrolled {
-  background: rgba(248,245,240,0.92);
+  background: rgba(248,252,253,0.92);
   backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 var(--border);
 }
@@ -192,7 +194,7 @@ nav.scrolled {
 
 .hero-line {
   position: absolute;
-  background: var(--accent);
+  background: var(--cyan);
   opacity: 0.08;
 }
 
@@ -216,7 +218,7 @@ nav.scrolled {
   position: absolute;
   width: 480px; height: 480px;
   border-radius: 50%;
-  border: 1px solid rgba(196,112,58,0.12);
+  border: 1px solid rgba(21,151,187,0.18);
   bottom: -120px;
   right: -80px;
   animation: fadeIn 2s ease both;
@@ -490,7 +492,7 @@ nav.scrolled {
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  background: linear-gradient(135deg, var(--bg-warm) 0%, #EDE8E0 100%);
+  background: linear-gradient(135deg, var(--bg-warm) 0%, rgba(143,214,225,0.45) 100%);
 }
 
 .thumb-icon {
@@ -520,7 +522,7 @@ nav.scrolled {
 .thumb-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26,23,20,0.7);
+  background: rgba(21,14,86,0.82);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -697,7 +699,7 @@ nav.scrolled {
   width: 48px;
   height: 48px;
   margin-bottom: 42px;
-  border: 1px solid rgba(196,112,58,0.35);
+  border: 1px solid rgba(123,17,58,0.35);
   border-radius: 50%;
   color: var(--accent);
   font-family: var(--ff-display);
@@ -829,7 +831,7 @@ footer {
 
 .footer-copy {
   font-size: 11px;
-  color: rgba(248,245,240,0.4);
+  color: rgba(143,214,225,0.65);
   letter-spacing: 0.06em;
 }
 
@@ -838,7 +840,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: rgba(26,23,20,0.85);
+  background: rgba(21,14,86,0.88);
   backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
