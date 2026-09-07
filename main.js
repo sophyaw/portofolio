@@ -24,35 +24,51 @@ const PROJECTS = [
     title: "Klasifikasi Hipertensi",
     sub: "Data Analysis · Healthcare · 2025",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 3 — tambahkan gambar di sini" },
+      { src: "img/Klasifikasi1.png", caption: "Tampilan Hasil Klasifikasi" },
+      { src: "img/Klasifikasi2.png", caption: "Tampilan Hasil Klasifikasi" },
+      // { src: "Klasifikasi3.png", caption: "Tampilan Hasil Klasifikasi" },
     ]
   },
   {
     title: "Web Album & Merch K-Pop Seventeen",
     sub: "PHP · MySQL · 2023",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 3 — tambahkan gambar di sini" },
+      { src: "img/Album1.png", caption: "Antarmuka Website" },
+      { src: "img/Album2.png", caption: "Halaman Katalog Album" },
+      { src: "img/Album3.png", caption: "Halaman Detail Merchandise" },
+      { src: "img/Album4.png", caption: "Halaman Tentang Kami" },
+      { src: "img/Album5.png", caption: "Halaman Contact Us" },
+      
     ]
   },
   {
     title: "Web Pemesanan Bis",
     sub: "PHP · MySQL · 2023",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
+      { src: "img/BlueBird1.jpg", caption: "Antarmuka Website" },
+      { src: "img/BlueBird2.jpg", caption: "Panel Admin - Melihat Data Bis" },
+      { src: "img/BlueBird3.jpg", caption: "Panel Admin - Input Data Bis" },
+      { src: "img/BlueBird4.jpg", caption: "Panel Admin - Edit Data Bis" },
+      { src: "img/BlueBird5.jpg", caption: "Panel Admin - Menghapus Data Bis" },
+      { src: "img/BlueBird6.jpg", caption: "Katalog Bis Tersedia" },
+      { src: "img/BlueBird7.jpg", caption: "Katalog Bis Tersedia" },
+      { src: "img/BlueBird8.jpg", caption: "Halaman Penyewaan Bis untuk Customer" },
+      { src: "img/BlueBird9.jpg", caption: "Halaman Registrasi" },
+      { src: "img/BlueBird10.jpg", caption: "Halaman Login" },
     ]
   },
   {
     title: "Wireframe Aplikasi Mobile Merchandise",
     sub: "Flutter · Mobile · 2024",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 3 — tambahkan gambar di sini" },
+      { src: "img/Mobile1.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile2.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile3.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile4.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile5.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile6.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile7.jpg", caption: "Tampilan Wireframe App" },
+      { src: "img/Mobile8.jpg", caption: "Tampilan Wireframe App" },
     ]
   },
   {
@@ -67,20 +83,32 @@ const PROJECTS = [
     title: "Tempat Sampah Otomatis IoT",
     sub: "IoT · Sensor Ultrasonik · 2025",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
+      { src: "img/TSO1.jpeg", caption: "Penyerahan Tempat Sampah Otomatis kepada Bpk Kepala Desa Badak Mekar" },
+      { src: "img/TSO2.png", caption: "Proyek Individu KKN Tempat Sampah Otomatis Berbasis Sensor Ultrasonik" },
     ]
   },
   {
     title: "Analisis Curah Hujan GSMaP",
     sub: "Python · Remote Sensing · 2025",
     images: [
-      { src: "", caption: "Screenshot 1 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 2 — tambahkan gambar di sini" },
-      { src: "", caption: "Screenshot 3 — tambahkan gambar di sini" },
+      { src: "img/Grafik1.png", caption: "Grafik Data Satelit CHRIPS" },
+      { src: "img/Grafik2.png", caption: "Grafik Ground Station (Data Pos Pengamat)" },
+      { src: "img/Grafik3.png", caption: "Grafik Data Satelit GSMaP" },
     ]
   },
 ];
+
+document.querySelectorAll('.project-thumb').forEach((thumb) => {
+  const project = PROJECTS[Number(thumb.closest('.project-item').dataset.index)];
+  const firstImage = project?.images.find((image) => image.src);
+
+  if (!firstImage) return;
+
+  const image = document.createElement('img');
+  image.src = firstImage.src;
+  image.alt = firstImage.caption || project.title;
+  thumb.insertBefore(image, thumb.firstChild);
+});
 
 /* ─── LIGHTBOX STATE ─────────────────────────────── */
 let lbCurrentProject = -1;
